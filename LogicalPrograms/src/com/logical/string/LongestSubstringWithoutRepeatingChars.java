@@ -9,9 +9,14 @@ public class LongestSubstringWithoutRepeatingChars {
         Map<Character, Integer> charIndex = new HashMap<>();
         int start = 0;
         int maxLen = 0;
+String string="dbdhbd";
+System.out.println(string.substring(0, 2));
+
+
 
         for (int end = 0; end < s.length(); end++) {
             char c = s.charAt(end);
+         
             if (charIndex.containsKey(c) && charIndex.get(c) >= start) {
                 start = charIndex.get(c) + 1;
             }
